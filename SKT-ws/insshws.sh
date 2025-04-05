@@ -2,9 +2,9 @@
 # Proxy For Edukasi & Imclass
 
 # Link Hosting Kalian
-SKAI0="raw.githubusercontent.com/rosi606/R051VPN/main/install"
+SKAI0="raw.githubusercontent.com/frosi4524/R051VPN/main/install"
 
-wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-ws/ws-dropbear
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-ws/ws-dropbear
 chmod +x /usr/local/bin/ws-dropbear
 
 # Installing Service
@@ -32,7 +32,7 @@ systemctl enable ws-dropbear.service
 systemctl start ws-dropbear.service
 systemctl restart ws-dropbear.service
 
-wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-ws/ws-ovpn.py
+wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-ws/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
@@ -59,7 +59,7 @@ systemctl daemon-reload
 systemctl enable ws-ovpn
 systemctl restart ws-ovpn
 
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-ws/ws-stunnel
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-ws/ws-stunnel
 chmod +x /usr/local/bin/ws-stunnel
 
 # Installing Service
