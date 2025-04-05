@@ -43,7 +43,7 @@ check_ip_and_get_info() {
 # =============================================
 
 # Ambil data dari GitHub dengan timeout
-permission_file=$(curl -s --connect-timeout 10 https://raw.githubusercontent.com/rosi606/1z1n/main/L1cense.txt)
+permission_file=$(curl -s --connect-timeout 10 https://raw.githubusercontent.com/frosi4524/1z1n/main/L1cense.txt)
 
 # Validasi file permission
 if [ -z "$permission_file" ]; then
@@ -205,7 +205,7 @@ function skt-domain() {
 
     # Fungsi instalasi slowdns
     install_slowdns() {
-        local script_url="https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-DnsTT/installsl.sh"
+        local script_url="https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-DnsTT/installsl.sh"
         local output_file="installsl.sh"
         
         echo -e "${COLOR1}Mengunduh SlowDNS...${NC}"
