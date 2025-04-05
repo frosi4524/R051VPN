@@ -44,7 +44,7 @@ check_ip_and_get_info() {
 # =============================================
 
 # Ambil data dari GitHub dengan timeout
-permission_file=$(curl -s --connect-timeout 10 https://raw.githubusercontent.com/rosi606/1z1n/main/L1cense.txt)
+permission_file=$(curl -s --connect-timeout 10 https://raw.githubusercontent.com/frosi4524/1z1n/main/L1cense.txt)
 
 # Validasi file permission
 if [ -z "$permission_file" ]; then
@@ -97,35 +97,35 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 echo -e " ═════════════════════════════════════════════════"
 echo -e " [INFO] Downloading File"
 sleep 2
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/update.sh" && chmod +x /usr/bin/update
-wget -q -O /usr/bin/m-tcp "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/m-tcp.sh" && chmod +x /usr/bin/m-tcp
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/update.sh" && chmod +x /usr/bin/update
+wget -q -O /usr/bin/m-tcp "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/m-tcp.sh" && chmod +x /usr/bin/m-tcp
 
-wget -q -O /usr/bin/m-theme "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
-wget -q -O /usr/bin/m-vmess "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
-wget -q -O /usr/bin/m-vless "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
-wget -q -O /usr/bin/m-trojan "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
+wget -q -O /usr/bin/m-theme "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
+wget -q -O /usr/bin/m-vmess "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
+wget -q -O /usr/bin/m-vless "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
+wget -q -O /usr/bin/m-trojan "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
 
-wget -q -O /usr/bin/skt-system "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-system.sh" && chmod +x /usr/bin/skt-system
-wget -q -O /usr/bin/skt-sshws "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-sshws.sh" && chmod +x /usr/bin/skt-sshws
-wget -q -O /usr/bin/skt-running "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-running.sh" && chmod +x /usr/bin/skt-running
-wget -q -O /usr/bin/skt-cekservice "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-cekservice.sh" && chmod +x /usr/bin/skt-cekservice
-wget -q -O /usr/bin/m-update "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/tendang.sh" && chmod +x /usr/bin/tendang
-wget -q -O /usr/bin/skt-check-port "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-check-port.sh" && chmod +x /usr/bin/skt-check-port
+wget -q -O /usr/bin/skt-system "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-system.sh" && chmod +x /usr/bin/skt-system
+wget -q -O /usr/bin/skt-sshws "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-sshws.sh" && chmod +x /usr/bin/skt-sshws
+wget -q -O /usr/bin/skt-running "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-running.sh" && chmod +x /usr/bin/skt-running
+wget -q -O /usr/bin/skt-cekservice "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-cekservice.sh" && chmod +x /usr/bin/skt-cekservice
+wget -q -O /usr/bin/m-update "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/tendang.sh" && chmod +x /usr/bin/tendang
+wget -q -O /usr/bin/skt-check-port "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-check-port.sh" && chmod +x /usr/bin/skt-check-port
 
-wget -q -O /usr/bin/skt-menu-backup "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-menu-backup.sh" && chmod +x /usr/bin/skt-menu-backup
-wget -q -O /usr/bin/skt-auto-backup "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-auto-backup.sh" && chmod +x /usr/bin/skt-auto-backup
-wget -q -O /usr/bin/skt-auto-restore "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-auto-restore.sh" && chmod +x /usr/bin/skt-auto-restore
-wget -q -O /usr/bin/skt-manual-backup "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-manual-backup.sh" && chmod +x /usr/bin/skt-manual-backup
-wget -q -O /usr/bin/skt-manual-restore "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/skt-manual-restore.sh" && chmod +x /usr/bin/skt-manual-restore
+wget -q -O /usr/bin/skt-menu-backup "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-menu-backup.sh" && chmod +x /usr/bin/skt-menu-backup
+wget -q -O /usr/bin/skt-auto-backup "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-auto-backup.sh" && chmod +x /usr/bin/skt-auto-backup
+wget -q -O /usr/bin/skt-auto-restore "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-auto-restore.sh" && chmod +x /usr/bin/skt-auto-restore
+wget -q -O /usr/bin/skt-manual-backup "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-manual-backup.sh" && chmod +x /usr/bin/skt-manual-backup
+wget -q -O /usr/bin/skt-manual-restore "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/skt-manual-restore.sh" && chmod +x /usr/bin/skt-manual-restore
 
-wget -q -O /usr/bin/xraylimit "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/xraylimit.sh" && chmod +x /usr/bin/xraylimit
-wget -q -O /usr/bin/trialvmess "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/trialvmess.sh" && chmod +x /usr/bin/trialvmess
-wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/trialtrojan.sh" && chmod +x /usr/bin/trialtrojan
-wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/trialvless.sh" && chmod +x /usr/bin/trialvless
-wget -q -O /usr/bin/trialssh "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/trialssh.sh" && chmod +x /usr/bin/trialssh
-wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/trial.sh" && chmod +x /usr/bin/trial
+wget -q -O /usr/bin/xraylimit "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/xraylimit.sh" && chmod +x /usr/bin/xraylimit
+wget -q -O /usr/bin/trialvmess "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/trialvmess.sh" && chmod +x /usr/bin/trialvmess
+wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/trialtrojan.sh" && chmod +x /usr/bin/trialtrojan
+wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/trialvless.sh" && chmod +x /usr/bin/trialvless
+wget -q -O /usr/bin/trialssh "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/trialssh.sh" && chmod +x /usr/bin/trialssh
+wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/trial.sh" && chmod +x /usr/bin/trial
 
 clear
 echo -e ""
