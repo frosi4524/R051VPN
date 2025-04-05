@@ -60,7 +60,7 @@ while true; do
     fi
 
     # Menggunakan curl untuk memeriksa apakah client_name ada dalam file permission.txt
-    permission_file=$(curl -s https://raw.githubusercontent.com/rosi606/1z1n/main/L1cense.txt)
+    permission_file=$(curl -s https://raw.githubusercontent.com/frosi4524/1z1n/main/L1cense.txt)
     if echo "$permission_file" | grep -q -i "$client_name"; then
         exp_date=$(echo "$permission_file" | grep -i "$client_name" | awk '{print $4}')
         echo "Client Name accepted... Let's go..."
@@ -267,7 +267,7 @@ cd
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 clear
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-Tools/tools.sh &> /dev/null
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-Tools/tools.sh &> /dev/null
 chmod +x tools.sh 
 bash tools.sh
 start=$(date +%s)
@@ -279,7 +279,7 @@ apt install python -y >/dev/null 2>&1
 
 cd
 clear
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-Tools/limit.sh && chmod +x limit.sh && ./limit.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-Tools/limit.sh && chmod +x limit.sh && ./limit.sh
 clear
 
 ##############################################################################
@@ -315,42 +315,42 @@ fun_bar() {
 }
 
 res3() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-System/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-System/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 }
 
 res4() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-System/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-System/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 }
 
 res5() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-ws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-ws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 }
 
 res6() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-System/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-System/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 }
 
 res7() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-ws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-ws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
 }
 
 res8() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/menu/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/menu/update.sh && chmod +x update.sh && ./update.sh
 clear
 }
 
 res9() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-System/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-System/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 clear
 }
 
 res10() {
-wget https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-System/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
+wget https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-System/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
 clear
 }
 
@@ -422,7 +422,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/rosi606/R051VPN/main/SKT-Tools/skt-versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/frosi4524/R051VPN/main/SKT-Tools/skt-versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -480,7 +480,7 @@ TIME=$(date '+%H:%M:%S')
 
 MESSAGE="\`\`\`
 ❏━━━━━━━━━━━━━━━━━❏
-🤖 SKT x WAN Project 🤖
+🤖 Rosi Store Project 🤖
 ❏━━━━━━━━━━━━━━━━━❏
 ❖ Status      : Active
 ❖ Status SC   : Admin Access
@@ -491,7 +491,7 @@ MESSAGE="\`\`\`
 ❖ Waktu       : $TIME
 ❖ Tanggal     : $DATE
 ❏━━━━━━━━━━━━━━━━━❏
-👑 Dev @SaputraTech 👑
+👑 Dev @FRosi46 👑
 ❏━━━━━━━━━━━━━━━━━❏
 \`\`\`"
 
