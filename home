@@ -60,7 +60,7 @@ while true; do
     fi
 
     # Menggunakan curl untuk memeriksa apakah client_name ada dalam file permission.txt
-    permission_file=$(curl -s https://raw.githubusercontent.com/frosi4524/1z1n/main/L1cense.txt)
+    permission_file=$(curl -s https://raw.githubusercontent.com/frosi4524/R051VPN/main/izin.txt)
     if echo "$permission_file" | grep -q -i "$client_name"; then
         exp_date=$(echo "$permission_file" | grep -i "$client_name" | awk '{print $4}')
         echo "Client Name accepted... Let's go..."
