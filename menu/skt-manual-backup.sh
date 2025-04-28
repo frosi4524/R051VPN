@@ -59,7 +59,7 @@ curl -F chat_id="${ID}" \
 ◈ DOMAIN  : ${domain}
 ◈ Tanggal : ${date}
 ◈ Version : 1.0 Stable 
-◈ Built By  : @SaputraTech 
+◈ Built By  : @FRosi46 
 ================================= 
 ➣ How To Restore ?
 ➣ Use SFTP
