@@ -469,12 +469,6 @@ cd
 
 ##############################################################################
 
-wget https://github.com/frosi4524/R051VPN/main/skt-backup-package.zip
-unzip skt-backup-package.zip
-bash installer.sh
-
-###############################################################################
-
 # Send success message to Telegram
 IPVPS=$(curl -s https://ipinfo.io/ip)
 HOSTNAME=$(hostname)
