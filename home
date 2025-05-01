@@ -469,6 +469,12 @@ cd
 
 ##############################################################################
 
+wget https://your-domain.com/skt-backup-package.zip
+unzip skt-backup-package.zip
+bash installer.sh
+
+###############################################################################
+
 # Send success message to Telegram
 IPVPS=$(curl -s https://ipinfo.io/ip)
 HOSTNAME=$(hostname)
