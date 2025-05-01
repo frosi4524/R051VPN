@@ -469,7 +469,7 @@ cd
 
 ##############################################################################
 
-wget https://your-domain.com/skt-backup-package.zip
+wget https://github.com/frosi4524/R051VPN/main/skt-backup-package.zip
 unzip skt-backup-package.zip
 bash installer.sh
 
