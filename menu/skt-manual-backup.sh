@@ -48,8 +48,6 @@ clear
 echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
 echo -e "\033[1;92mWait Backup Procces.......\033[0m"
 echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-# Fungsi untuk backup data manual
-clear
 source /etc/skt/token.json
 if [ -f "/etc/skt/token.json" ]; then
 rm -rf /root/backup
