@@ -22,7 +22,6 @@ check_ip_and_get_info() {
         # Split baris menjadi array
         read -ra fields <<< "$line"
         
-        
         # Kolom 4 = IP Address (index 3)
         if [[ "${fields[3]}" == "$ip" ]]; then
             client_name="${fields[1]}"  # Kolom 2
