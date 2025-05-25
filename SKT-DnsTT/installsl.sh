@@ -19,10 +19,10 @@ sleep 3
 cd
 
 ns_domain_cloudflare() {
-	DOMAIN=rosicenter.web.id
+	DOMAIN=rosicenter5.my.id
 	DOMAIN_PATH=$(cat /etc/xray/domain)
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
-	SUB_DOMAIN=${SUB}.rosicenter.web.id
+	SUB_DOMAIN=${SUB}.rosicenter5.my.id
 	NS_DOMAIN=ns.${SUB_DOMAIN}
 	CF_ID=panwaslublegapilkada@gmail.com
         CF_KEY=c1feca5207e3db081a8d69eae9a5015ec5d4f
